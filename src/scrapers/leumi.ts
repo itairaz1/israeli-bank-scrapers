@@ -220,7 +220,7 @@ class LeumiScraper extends BaseScraperWithBrowser {
   }
 
   async fetchData(): Promise<ScaperScrapingResult> {
-    const defaultStartMoment = moment().subtract(1, 'years').add(1, 'day');
+    const defaultStartMoment = moment().subtract(3, 'years').add(1, 'day');
     const startDate = this.options.startDate || defaultStartMoment.toDate();
     const startMoment = moment.max(defaultStartMoment, moment(startDate));
 
